@@ -1,6 +1,6 @@
 <h1>{{ question.question_text }}
-    -
-    {% if question.has_votes %} Votos: {{ question.total_votes }}</strong></p>{% endif %}
+    {% if question.has_votes %} - Votos: {{ question.total_votes }}</strong></p>{% endif %}
+    {% if not question.has_votes %} - Sem votos</strong></p>{% endif %}
 </h1>
 
 <ul>
@@ -9,4 +9,4 @@
     {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a href="{% url 'polls:detail' question.id %}">Votar novamente?</a>

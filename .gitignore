@@ -1,1 +1,5 @@
-db.sqlite3
+!db.sqlite3
+.gitignore
+mysite/__pycache__
+polls/migrations
+polls/__pycache__
